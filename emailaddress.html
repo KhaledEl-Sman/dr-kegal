@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Kegel: for Men's Health</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <div id="app" data-v-app="" style="background-color: rgb(255, 255, 255);">
+        <div data-v-69926a43="" class="flex flex-col min-h-100dvh relative">
+            <div data-v-50d316ad=""
+                class="absolute top-0 left-0 right-0 bottom-0 max-w-600px mx-auto max-h-100dvh overflow-hidden blur-effect bg-[#fff]">
+                <img data-v-50d316ad="" src="img/email_v3_bg.webp" class="max-w-450px w-full mx-auto px-32px">
+            </div>
+            <div data-v-50d316ad="" class="absolute bottom-0 bg-[#fff] p-32px pb-64px w-full">
+                <div data-v-50d316ad="" class="max-w-311px mx-auto">
+                    <h2 data-v-50d316ad="" class="font-display font-600 text-center m-0 text-20px leading-snug mb-24px">
+                        Enter email to get your personal Kegel Plan</h2>
+                    <form data-v-50d316ad="" onsubmit="event.preventDefault(); addEmail();"><label data-v-3834976c=""
+                            class="relative text-center mx-auto block mb-24px" for="email"><input data-v-3834976c=""
+                                required id="email" onkeydown="enableSubmit(event)"
+                                class="bg-[#F1F3F9] shadow-input appearance-none rounded-9px transition text-14px leading-normal py-14px px-20px w-full relative outline-none focus:outline-none active:outline-none placeholder-body/50 border-2px border-transparent text-body pr-40px"
+                                type="email" placeholder="Enter your email"><img data-v-3834976c=""
+                                src="img/icon_lock.94d62183.svg" alt="img"
+                                class="absolute top-[50%] right-20px transform translate-y-[-50%]"></label>
+                        <p data-v-50d316ad=""
+                            class="font-400 text-10px leading-normal text-center text-body opacity-50 mb-24px">Your
+                            personal data is safe with us. We'll use your email for updates, receipts, and subscription
+                            details.</p><button data-v-3defcdd0="" id="button"
+                            class="relative font-700 h-53px py-15px px-0 w-full mx-auto mt-0 text-18px leading-tight text-center text-[#fff] border-none block cursor-pointer transition rounded-9px bg-red shadow-button-red !bg-[#CACACA] !shadow-none !cursor-default"
+                            disabled type="submit"><span data-v-3defcdd0="">Continue</span></button>
+                    </form>
+                </div>
+                <div class="absolute bottom-0 right-0" data-v-50d316ad=""><span class="font-display font-800"
+                        data-v-50d316ad=""></span><span class="font-display font-500" data-v-50d316ad=""></span><span
+                        class="font-300" data-v-50d316ad=""></span><span class="font-600" data-v-50d316ad=""></span>
+                </div>
+            </div><span data-v-50d316ad="" class="preload-img"></span>
+        </div>
+    </div>
+
+    <script>
+        function enableSubmit(e) {
+            const emailInput = e.target;
+            const emailValue = emailInput.value + e.key;
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (emailPattern.test(emailValue)) {
+                document.querySelector("button.shadow-button-red").classList.remove("!shadow-none");
+                document.querySelector("button.shadow-button-red").classList.remove("!bg-[#CACACA]");
+                document.querySelector("button.shadow-button-red").classList.remove("!cursor-default");
+                document.getElementById('button').disabled = false;
+            } else {
+                document.querySelector("button.shadow-button-red").classList.add("!shadow-none");
+                document.querySelector("button.shadow-button-red").classList.add("!bg-[#CACACA]");
+                document.querySelector("button.shadow-button-red").classList.add("!cursor-default");
+                document.getElementById('button').disabled = true;
+            }
+        }
+        function addEmail() {
+            window.location.href = 'landing.html';
+        }
+    </script>
+</body>
+
+</html>

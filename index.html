@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Kegel: for Men's Health</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app" style="background-color: rgb(255, 255, 255);">
+        <div class="flex flex-col min-h-100dvh relative">
+            <div class="bg-white">
+                <div class="">
+                    <header
+                        class="relative w-full top-0 left-0 right-0 pt-24px pb-32px mx-auto transition bg-transparent px-32px">
+                        <div class="max-w-600px w-full mx-auto"><img src="img/logo.png" alt="logo"
+                                class="inline-block w-120px sm:w-150px"></div>
+                    </header>
+                    <div class="max-w-600px mx-auto px-32px w-full">
+                        <div class="pb-100px">
+                            <h2 class="font-display text-18px leading-tight font-600">Creating Sexual Wellness Plan</h2>
+                            <video muted autoplay loop playsinline class="mt-8px mx-auto">
+                                <source src="media/progress_bar_start_v1.e0c5ceb2.mp4" type="video/mp4">
+                            </video>
+                            <div class="mt-25px">
+                                <p class="font-display text-16px leading-normal text-center mb-5px">How old are you?</p>
+                                <div class="grid grid-cols-2 gap-x-7px gap-y-4px">
+                                    <button
+                                        class="flex relative items-center justify-center bg-transparent border-none cursor-pointer"
+                                        onclick="setAge('\(18 - 24 years\)')">
+                                        <img src="img/1.3aad0768.png" class="block w-full">
+                                        <div
+                                            class="bg-red w-full absolute bottom-0 left-0 right-0 py-10px rounded-bottom-18px">
+                                            <p
+                                                class="text-18px font-display font-600 leading-tight text-center text-[#fff]">
+                                                25-35 &gt;</p>
+                                        </div>
+                                    </button>
+                                    <button
+                                        class="flex relative items-center justify-center bg-transparent border-none cursor-pointer"
+                                        onclick="setAge('\(25 - 34 years\)')">
+                                        <img src="img/2.f66768ce.png" class="block w-full">
+                                        <div
+                                            class="bg-red w-full absolute bottom-0 left-0 right-0 py-10px rounded-bottom-18px">
+                                            <p
+                                                class="text-18px font-display font-600 leading-tight text-center text-[#fff]">
+                                                35-45 &gt;</p>
+                                        </div>
+                                    </button>
+                                    <button
+                                        class="flex relative items-center justify-center bg-transparent border-none cursor-pointer"
+                                        onclick="setAge('\(35 - 44 years\)')">
+                                        <img src="img/3.b78b7fb1.png" class="block w-full">
+                                        <div
+                                            class="bg-red w-full absolute bottom-0 left-0 right-0 py-10px rounded-bottom-18px">
+                                            <p
+                                                class="text-18px font-display font-600 leading-tight text-center text-[#fff]">
+                                                45-55 &gt;</p>
+                                        </div>
+                                    </button>
+                                    <button
+                                        class="flex relative items-center justify-center bg-transparent border-none cursor-pointer"
+                                        onclick="setAge('\(45 - 54 years\)')">
+                                        <img src="img/4.cf853c71.png" class="block w-full">
+                                        <div
+                                            class="bg-red w-full absolute bottom-0 left-0 right-0 py-10px rounded-bottom-18px">
+                                            <p
+                                                class="text-18px font-display font-600 leading-tight text-center text-[#fff]">
+                                                55+ &gt;</p>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="text-14px text-center leading-normal opacity-75 mt-35px">By choosing your age and
+                                continuing you agree to our <a href="#" target="_blank"
+                                    class="text-blue underline">Terms &amp; Conditions</a> | <a href="#" target="_blank"
+                                    class="text-blue underline">Privacy Policy</a>. Please review before
+                                continuing</p>
+                            <div class="mt-65px opacity-50 text-center">
+                                <p class="text-14px leading-normal text-center mt-32px opacity-50"><span class="block">
+                                        Appercut sp z o o </span> Warsaw, Twarda 18, 00-105 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function setAge(age) {
+            localStorage.setItem('age', age);
+            window.location.href = 'survey/1.html';
+        }
+    </script>
+</body>
+
+</html>

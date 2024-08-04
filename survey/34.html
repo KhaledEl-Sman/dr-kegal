@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Kegel: for Men's Health</title>
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+
+    <div id="app" data-v-app="" style="background-color: rgb(255, 255, 255);">
+        <div data-v-69926a43="" class="flex flex-col min-h-100dvh relative">
+            <div data-v-69926a43="" class="flex bg-white flex-grow flex-col h-full w-full mx-auto pb-50px">
+                <header
+                    class="relative w-full top-0 left-0 right-0 pt-24px pb-32px mx-auto transition bg-transparent px-32px">
+                    <div class="max-w-600px w-full mx-auto"><img src="../img/logo.png" alt="logo"
+                            class="inline-block w-120px sm:w-150px"></div>
+                </header>
+                <div class="max-w-600px w-full mx-auto px-32px">
+                    <div modelvalue="2">
+                        <h2 class="text-center font-display font-600 leading-snug text-32px">Final adjustment</h2>
+                        <div class="mt-16px text-center text-18px leading-normal">
+                            <h3 id="target" class="text-16px leading-normal mb-7px sm:text-18px">Improve <span
+                                    class="font-600">Erectile
+                                    Function</span> and <span class="font-600">Ejaculation Control</span></h3>
+                            <div
+                                class="flex mx-auto relative justify-center gap-6px min-h-38px items-center max-h-38px">
+                                <span class="font-700 text-20px leading-normal text-blue">by August 19</span><video
+                                    playsinline="" preload="auto" autoplay loop muted playsinline
+                                    class="mx-auto max-w-90px !m-0">
+                                    <source src="../media/video_34_faster.48081f44.mp4" type="video/mp4"> Your browser
+                                    doesn't support HTML5 video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <div class="text-center mt-32px"><video autoplay muted playsinline preload="auto"
+                                class="mx-auto">
+                                <source src="../media/video_graph_final.5c1f334e.mp4" type="video/mp4"> Your browser
+                                doesn't support HTML5 video tag.
+                            </video>
+                            <p class="font-300 text-12px leading-normal opacity-50 mt-7px text-center">*for illustration
+                                purposes only</p>
+                        </div>
+                        <div class="">
+                            <div class="flex flex-col items-center justify-center mt-32px transition duration-1000">
+                                <div>
+                                    <h2 class="inline font-display text-20px leading-normal font-600">Compatibility
+                                        Score: </h2><span
+                                        class="inline font-display text-20px leading-normal text-green font-600">High</span>
+                                </div>
+                                <div class="mt-15px"><video preload="auto" autoplay muted playsinline class="mx-auto">
+                                        <source src="../media/video_compatibility_score.dd4d77ff.mp4" type="video/mp4">
+                                        Your browser doesn't support HTML5 video tag.
+                                    </video></div><span
+                                    class="font-display font-800 leading-tight text-20px text-green px-12px rounded-9px border-2 border-green mt-13px">84.6%</span>
+                                <p class="mt-25px"><strong class="rate">84.6%</strong> of men from the same age group as
+                                    you
+                                    <strong id="age">(18 - 24 years)</strong> report noticeable improvements by
+                                    following Kegel
+                                    Plan
+                                </p>
+                                <p class="font-300 text-12px leading-normal opacity-50 mt-16px text-center">*statistics
+                                    from internal survey</p>
+                            </div>
+                            <div
+                                class="mt-42px flex items-center w-full max-w-311px gap-5px mx-auto transition duration-1000">
+                                <button data-v-9e24ce5c=""
+                                    class="relative min-h-63px py-20px px-0 w-full transition mx-auto mt-0 text-18px leading-tight text-center text-[#fff] border-none block cursor-pointer rounded-9px bg-red !mt-auto !min-h-unset !py-15px !text-white !bg-red !mt-auto !min-h-unset !py-15px !text-white !bg-red"
+                                    type="button" reversed="true" onclick="goNext()"><span
+                                        data-v-9e24ce5c="">Continue</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let ageText = localStorage.getItem('age');
+        document.querySelector("#age").innerHTML = ageText;
+
+        if (ageText != null) {
+            if (ageText == "(18 - 24 years)") {
+                document.querySelector("span.font-800").innerHTML = "84.6%";
+                document.querySelector("strong.rate").innerHTML = "84.6%";
+            } else if (ageText == "(25 - 34 years)") {
+                document.querySelector("span.font-800").innerHTML = "89.6%";
+                document.querySelector("strong.rate").innerHTML = "89.6%";
+            } else if (ageText == "(35 - 44 years)") {
+                document.querySelector("span.font-800").innerHTML = "87.8%";
+                document.querySelector("strong.rate").innerHTML = "87.8%";
+            } else if (ageText == "(45 - 54 years)") {
+                document.querySelector("span.font-800").innerHTML = "96.7%";
+                document.querySelector("strong.rate").innerHTML = "96.7%";
+            }
+        }
+
+        let currentDate = new Date();
+        let options = { month: 'long', day: 'numeric' };
+        currentDate.setDate(currentDate.getDate() + 28);
+        let formattedDate = currentDate.toLocaleDateString('en-US', options);
+        document.querySelector("span.text-blue").innerHTML = `by ${formattedDate}`;
+
+        let choice = localStorage.getItem("choice");
+        if (choice != null) {
+            if (choice == 1) {
+                document.querySelector("#target").innerHTML = `
+                    Improve <span class="font-600">Erectile Function</span>
+                `;
+            } else if (choice == 2) {
+                document.querySelector("#target").innerHTML = `
+                    Improve <span class="font-600">Ejaculation Control</span>
+                `;
+            } else if (choice == 3) {
+                document.querySelector("#target").innerHTML = `
+                    Improve <span class="font-600">Erectile Function</span> and <span class="font-600">Ejaculation Control</span>
+                `;
+            }
+        }
+
+        function goNext() {
+            window.location.href = '../emailaddress.html';
+        }
+    </script>
+</body>
+
+</html>
